@@ -1,0 +1,14 @@
+This sub-set contains all <Demon> cards (CARDS.txt)
+
+#5015 06_Illidan_Stormrage_07_05 Whenever you play a card, summon a 2/1 Flame of Azzinoth.
+#1805 01_Voidwalker_01_03 TAUNT
+#1806 02_Felstalker_04_03 BATTLECRY: Discard a random card.
+#1810 06_Dread_Infernal_06_06 BATTLECRY: Deal 1 damage to ALL other characters.
+#2801 01_Blood_Imp_00_01 STEALTH. At the end of your turn, give another random friendly minion +1 Health.
+#2802 01_Flame_Imp_03_02 BATTLECRY: Deal 3 damage to your hero.
+#3801 03_Felguard_03_05 TAUNT. BATTLECRY: Destroy one of your Mana Crystals.
+#3802 03_Void_Terror_03_03 BATTLECRY: Destroy both adjacent minions and gain their Attack an Health.
+#3804 05_Doomguard_05_07 CHARGE. BATTLECRY: Discard two random cards.
+#4801 04_Pit_Lord_05_06 BATTLECRY: Deal 5 damage to your hero.
+#5801 09_Lord_Jaraxxus_03_15 BATTLECRY: Destroy your hero and replace it with Lord Jaraxxus.
+

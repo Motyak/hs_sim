@@ -1,0 +1,9 @@
+This sub-set contains all <Pirate> cards (CARDS.txt)
+
+#2006 01_Southsea_Deckhand_02_01 Has Charge while you have a weapon equipped.
+#2010 02_Bloodsail_Raider_02_03 BATTLECRY: Gain Attack equal to the Attack of your weapon.
+#2029 04_Dread_Corsair_03_03 TAUNT Costs (1) less per Attack of your weapon.
+#3002 01_Bloodsail_Corsair_01_02 BATTLECRY: Remove 1 Durability from your opponent's weapon
+#4007 03_Southsea_Captain_03_03 Your other Pirates have +1/+1.
+#5009 05_Captain_Greenskin_05_04 BATTLECRY: Give your weapon +1/+1.
+

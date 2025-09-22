@@ -1,0 +1,182 @@
+        "id": 1000,
+        "type": "MINION",
+        "attack": 3,
+        "health": 5,
+        "cost": 5,
+        "cardClass": "HUNTER",
+        "name": "Barak_Kodobane",
+        "rarity": "LEGENDARY",
+        "mechanics": [
+            "BATTLECRY"
+        ]
+        
+        
+        "id": 1001,
+        "type": "SPELL"
+        "cost": 5,
+        "cardClass": "DRUID",
+        "name": "Nourish",
+        "rarity": "RARE",
+        "mechanics": [
+            "CHOOSE_ONE"
+        ],
+        
+
+L'effet d'une carte ne sera pas sérialisé,
+on associe chaque id de carte à un effet associé
+dans le code.
+
+---
+
+conventions pour l'id:
+
+ID convention :
+
+1xxx => sorts/serviteurs free
+2xxx => sorts/serviteurs communes
+3xxx => sorts/serviteurs rares
+4xxx => sorts/serviteurs épiques
+5xxx => sorts/serviteurs légendaires
+
+x0xx => serviteurs neutres
+x1xx => sorts/serviteurs druid
+x2xx => sorts/serviteurs hunter
+x3xx => sorts/serviteurs mage
+x4xx => sorts/serviteurs paladin
+x5xx => sorts/serviteurs priest
+x6xx => sorts/serviteurs rogue
+x7xx => sorts/serviteurs shaman
+x8xx => sorts/serviteurs warlock
+x9xx => sorts/serviteurs warrior
+
+card names (unique as well, but visible to end-user):
+
+00Innervate
+01Claw
+04Keeper0204 (Keeper of the Grove)
+
+so that when sorted by name it's in fact sorted
+by cost first and then my actual name (alphabetical order)
+
+you can even handle to sort by attack or health 
+by checking the 4 last characters
+
+you can check if an id is a sort if:
+- le dernier caractère du nom associé est
+  un digit [0-9].
+(évidemment les cartes neutres n'ont pas de sorts)
+
+you can check if an id is a weapon if:
+- l'avant dernier caractère du nom associé
+  est un '_'
+(évidemment les cartes neutres n'ont pas d'armes)
+
+Put that in a TreeMap so that we can iterate through
+key/val by sorted key.
+
+---
+
+storer des unions, en fonction de l'id est inférieur à 1000
+on sait que c'est un pointeur vers une autre map,
+sinon c'est une "carte".
+
+#0 => adresse symbolique, pointe vers une map qui contient
+tous les serviteurs neutres
+
+#100 => adresse symbolique, pointe vers une map qui contient
+tous les sorts/serviteurs druides
+
+etc..
+
+---
+
+on va faire un fichier .txt par sub-set de cartes.
+(Pas de sub-set redondant par rapport à ce qu'on peut
+ déjà query en prenant en considération les conventions
+ de l'id, genre on peut facilement récupérer
+ toutes les cartes d'une certaine rareté ou appartenant
+ à une certaine classe, etc..)
+
+  -> CARDS.txt
+    -> uppercase because the most important,
+       should appear first when sorted lexicographically
+  -> beasts.txt
+  -> pirates.txt
+  (on peut avoir les minions en faisant {CARDS} - {spells} - {weapons}
+  
+Pour les sub-sets spells et weapons, on peut les connaître programmatiquement
+à partir des infos de cartes dans CARDS.txt
+
+---
+
+struct CardInfo {
+    uint16_t id;
+    uint8_t cost;
+    std::string_view nameFmt; // formatted as in .txt files, for serializing purpose
+    std::string_view name;
+    std::string_view desc;
+    BelongingEnum belonging; // underlying uint16_t, use powers of 2 to allow checking for a set of belongings
+    RarityEnum rarity; // underlying uint8_t, use powers of 2 to allow checking for a set of rarities
+    CardTypeEnum cardType; // underlying uint8_t, use powers of 2 to allow checking for a set of types
+}
+
+struct MinionInfo {
+    CardInfo _; // cast to CardInfo* to get CardInfo fields
+    uint8_t attack;
+    uint8_t health;
+    RaceEnum race; // underlying uint8_t, use powers of 2 to allow checking for a set of races
+    uint8_t mechanics; // bitset of MechanicEnum (<=> bitflags)
+}
+
+struct WeaponInfo {
+    CardInfo _; // cast to CardInfo* to get CardInfo fields
+    uint8_t attack;
+    uint8_t durability;
+}
+
+struct SpellInfo {
+    CardInfo _; // cast to CardInfo* to get CardInfo fields
+}
+
+Utiliser les types variant de manière ad-hoc (pas de typedef/using prédéfinis):
+    std::variant<MinionInfo, SpellInfo>
+    std::variant<MinionInfo, WeaponInfo>
+    std::variant<SpellInfo, WeaponInfo>
+    std::variant<MinionInfo, SpellInfo, WeaponInfo>
+
+Quand on a besoin que des infos de CardInfo, alors on utilise
+  le type CardInfo.
+
+---
+
+Pour créer les différents sets/sub-sets:
+
+1) Parsing des fichiers card-info/*.txt
+  -> info.cards[<#id>] => std::variant<MinionInfo, SpellInfo, WeaponInfo>
+  -> info.beasts[<#id>] => ...
+  -> info.pirates
+  -> info.demons
+  -> info.murlocs
+
+2) Déduire programmatiquement certains sub-sets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

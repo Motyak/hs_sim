@@ -1,0 +1,12 @@
+This sub-set contains all <Murloc> cards (CARDS.txt)
+
+#1003 01_Grimscale_Oracle_01_01 ALL other Murlocs have +1 Attack.
+#1004 01_Murloc_Raider_02_01
+#1009 02_Bluegill_Warrior_02_01 CHARGE
+#1012 02_Murloc_Tidehunter_02_01 BATTLECRY: Summon a 1/1 Murloc Scout.
+#3004 01_Murloc_Tidecaller_01_02 Whenever a Murloc is summoned, gain +1 Attack.
+#3018 03_Coldlight_Oracle_02_02 BATTLECRY: Each player draws 2 cards.
+#3019 03_Coldlight_Seer_02_03 BATTLECRY: Give ALL other Murlocs +2 Health.
+#4006 03_Murloc_Warleader_03_03 ALL other Murlocs have +2/+1.
+#5008 04_Old_Murk-Eye_02_04 CHARGE. Has +1 Attack for each other Murloc on the battlefield.
+

@@ -1,0 +1,142 @@
+- Only classic set cards (392 collectible cards including 25 per class)
+  -> cards from pre-Naxx, no changes past that
+  -> https://hearthstone.wiki.gg/wiki/Classic_format
+  -> https://hearthstone-decks.net/classic.deck/
+
+- no farm, only game modes
+  -> no quests
+  -> no golds/rewards
+  -> no personal collection
+  -> have access to all pro-decks right away,
+     with the ability to create your own
+
+- less RNG
+  -> player always plays first ?
+  -> you never face two times in a row the same
+     opponent/deck (even between two different
+     tournaments)
+  -> AI doesn't "draw cards" per say, we only
+     store the number of cards it has in hands.
+     The AI plays a card from the deck, and we then
+     assume that it was this card he drew at turn x.
+
+- pro decks:
+  -> miracle rogue
+  -> control warrior
+  -> freeze mage
+  -> face hunter
+  -> handlock
+  -> zoo
+  -> midrange combo druid
+  -> control paladin
+  -> aggro shaman, murloc? (bloodlust or boosted doomhammer)
+  -> control priest (worst class)
+- fun decks:
+  -> OTK worgen (warrior)
+  -> mill druid
+  -> OTK priest (Vellen + shadowform or Lightwell + inner fire)
+
+=== game modes ===
+
+- tournament (Mario Smash Football -like)
+  -> play against pro decks, with AI per deck
+     win condition
+  -> so to win the tournament, your deck needs
+     to be able to defeat all the others
+    -> similar to Last Hero Standing match format
+     (played by AI though, so it's easier)
+  -> no mirror match (we assume human always
+     play the deck better than AI)
+
+- custom rules for a game/tournament
+  -> in a tournament, you can make bots play against each other
+     so that you don't need to defeat ALL other decks, but only
+     some of them (quicker than default, but now RNG-based,
+     because there are better matchups than others,
+     so you're not necessarily "better" than the others)
+  -> enable/disable mulligan
+
+- draft mode, with the ability to "steal" minions
+  from the opponents when you kill them
+    -> pokemon colloseum -like
+
+=== more like mini-games ===
+
+"test knowledge" kind-of games:
+
+- "spot the lethal" logic puzzles
+  -> could be another "solved" condition than winning the game
+  -> https://hearthstone.wiki.gg/wiki/Puzzle_Lab
+
+- cardle (wordle pour les cartes Hearthstone)
+  -> https://cardlegame.com/
+
+  
+========================================
+
+Le plus important:
+  -> avoir une IA qui sait jouer chacun des decks pro
+     contre chacun des autres decks pro
+     (on s'en fout du mirror match)
+    -> si on a pas de coup spécial à jouer qui favorise
+       la win condition spécifique de notre deck,
+       alors on bascule sur une stratégie plus général
+       de trade (typiquement comme le gameplay en arène,
+       on cherche le board value)
+
+Itérations:
+
+1) Une IA "AFK" (passe son tour directement)
+  -> juste pour tester la pioche de cartes
+     + dégâts fatigue
+
+2) Une IA random (choisit une option aléatoirement
+   y compris passer le tour, en boucle,
+   jqa n'avoir comme choix que de passer le tour)
+
+3) Une IA "board control"
+  -> ne considère que les serviteurs
+  -> son objectif est de jouer optimalement
+     ses ressources pour avoir le contrôle
+     du board (joueur d'arène quoi)
+     
+4) Une IA "win condition" spécifique à chaque deck
+  -> hunt face
+    -> life advantage (on va toujours face)
+    -> "aggro" mode only, play the same against everyone
+       (easiest IA to code)
+  -> zoo
+    -> board advantage (on optimise la tempo,
+       pour win mid-game)
+  -> has a "aggro" mode and a "board control" mode
+     (only goes "aggro" against control deck)
+  
+========================================
+
+MVP:
+
+1) Cartes == Juste des serviteurs avec stats (sans effet),
+   AI: Choix des coups: aléatoire
+  -> récupérer toutes les carte du format "Classic" pre-Naxx,
+     les sérialiser/parser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

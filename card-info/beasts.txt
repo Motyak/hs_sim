@@ -1,0 +1,28 @@
+This sub-set contains all <Beast> cards (CARDS.txt)
+
+#1005 01_Stonetusk_Boar_01_01 CHARGE
+#1008 02_Bloodfen_Raptor_03_02
+#1014 02_River_Crocolisk_02_03
+#1017 03_Ironfur_Grizzly_03_03 TAUNT
+#1022 03_Silverback_Patriarch_01_04 TAUNT
+#1027 04_Oasis_Snapjaw_02_07
+#1041 07_Core_Hound_09_05 
+#2008 01_Young_Dragonhawk_01_01 WINDFURY
+#2011 02_Dire_Wolf_Alpha_02_02 Adjacent minions have +1 Attack.
+#2013 02_Ironbeak_Owl_02_01 BATTLECRY: Silence a minion.
+#2021 03_Jungle_Panther_04_02 STEALTH
+#2036 05_Stranglethorn_Tiger_05_05 STEALTH
+#3001 01_Angry_Chicken_01_01 ENRAGE: +5 Attack.
+#3021 03_Emperor_Cobra_02_03 POISONOUS
+#3033 05_Stampeding_Kodo_03_05 BATTLECRY: Destroy a random enemy minion with 2 or less Attack.
+#4001 01_Hungry_Crab_01_02 BATTLECRY: Destroy a Murloc and gain +2/+2.
+#4002 02_Captain's_Parrot_01_01 BATTLECRY: Draw a Pirate from your deck.
+#5005 03_King_Mukla_05_05 BATTLECRY: Give you opponent 2 Bananas.
+#5017 06_The_Beast_09_07 DEATHRATTLE: Summon a 3/3 Pip Quickwit for your opponent.
+#1203 01_Timber_Wolf_01_01 Your other Beasts have +1 Attack.
+#1205 02_Starving_Buzzard_02_01 Whenever you summon a Beast, draw a card.
+#1210 05_Tundra_Rhino_02_05 Your Beasts have Charge.
+#2203 02_Scavenging_Hyena_02_02 Whenever a friendly Beast dies, gain +2/+1.
+#3205 06_Savannah_Highmane_06_05 DEATHRATTLE: Summon two 2/2 Hyenas.
+#5201 09_King_Krush_08_08 CHARGE
+

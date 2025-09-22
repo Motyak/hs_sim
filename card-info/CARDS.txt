@@ -1,0 +1,443 @@
+
+The main objective is to assign a unique id to each individual collectible card
+  from the Classic set (pre-Naxx).
+
+You can deduce some information from the id itself
+  , without having to look at the associated card
+  -> first digit is the rarity, from "free" (1) up to "legendary" (5)
+  -> second digit indicates the class, from "Druid" (1) up to "Warrior" (9),
+     digit 0 is used for neutrals
+
+ID
+
+1xxx => free cards
+2xxx => common cards
+3xxx => rare cards
+4xxx => epic cards
+5xxx => legendary cards
+
+x0xx => neutral cards
+x1xx => druid cards
+x2xx => hunter cards
+x3xx => mage cards
+x4xx => paladin cards
+x5xx => priest cards
+x6xx => rogue cards
+x7xx => shaman cards
+x8xx => warlock cards
+x9xx => warrior cards
+
+Apart from rarity and class belonging, the cards are sorted by cost and name
+  (names are unique).
+
+<free neutrals>
+#1001 01_Elven_Archer_01_01 BATTLECRY: Deal 1 damage.
+#1002 01_Goldshire_Footman_01_02 TAUNT
+#1003 01_Grimscale_Oracle_01_01 ALL other Murlocs have +1 Attack.
+#1004 01_Murloc_Raider_02_01
+#1005 01_Stonetusk_Boar_01_01 CHARGE
+#1006 01_Voodoo_Doctor_02_01 BATTLECRY: Restore 2 Health.
+#1007 02_Acidic_Swamp_Ooze_03_02 BATTLECRY: Destroy your opponent's weapon
+#1008 02_Bloodfen_Raptor_03_02
+#1009 02_Bluegill_Warrior_02_01 CHARGE
+#1010 02_Frostwolf_Grunt_02_02 TAUNT
+#1011 02_Kobold_Geomancer_02_02 SPELL DAMAGE +1
+#1012 02_Murloc_Tidehunter_02_01 BATTLECRY: Summon a 1/1 Murloc Scout.
+#1013 02_Novice_Engineer_01_01 BATTLECRY: Draw a card.
+#1014 02_River_Crocolisk_02_03
+#1015 03_Dalaran_Mage_01_04 SPELL DAMAGE +1
+#1016 03_Ironforge_Rifleman_02_02 BATTLECRY: Deal 1 damage.
+#1017 03_Ironfur_Grizzly_03_03 TAUNT
+#1018 03_Magma_Rager_05_01
+#1019 03_Raid_Leader_02_02 Your other minions have +1 Attack.
+#1020 03_Razorfen_Hunter_02_03 BATTLECRY: Summon a 1/1 Boar.
+#1021 03_Shattered_Sun_Cleric_03_02 BALLECRY: Give a friendly minion +1/+1.
+#1022 03_Silverback_Patriarch_01_04 TAUNT
+#1023 03_Wolfrider_03_01 CHARGE
+#1024 04_Chillwind_Yeti_04_05
+#1025 04_Dragonling_Mechanic_02_04 BATTLECRY: Summon a 2/1 Mechanical Dragonling.
+#1026 04_Gnomish_Inventor_02_04 BATTLECRY: Draw a card.
+#1027 04_Oasis_Snapjaw_02_07
+#1028 04_Ogre_Magi_04_04 SPELL DAMAGE +1
+#1029 04_Sen'jin_Shieldmasta_03_05 TAUNT
+#1030 04_Stormwind_Knight_02_05 CHARGE
+#1031 05_Booty_Bay_Bodyguard_05_04 TAUNT
+#1032 05_Darkscale_Healer_04_05 BATTLECRY: Restore 2 Health to all friendly characters.
+#1033 05_Frostwolf_Warlord_04_04 BATTLECRY: Gain +1/+1 for each other friendly minion on the battlefield
+#1034 05_Gurubashi_Berserker_02_07 Whenever this minion takes damage, gain +3 Attack.
+#1035 05_Nightblade_04_04 BATTLECRY: Deal 3 damage to the enemy hero.
+#1036 05_Stormpike_Commando_04_02 BATTLECRY: Deal 2 damage.
+#1037 06_Archmage_04_07 SPELL DAMAGE +1
+#1038 06_Boulderfist_Ogre_06_07
+#1039 06_Lord_of_the_Arena_06_05 TAUNT
+#1040 06_Reckless_Rocketeer_05_02 CHARGE
+#1041 07_Core_Hound_09_05 
+#1042 07_Stormwind_Champion_06_06 Your other minions have +1/+1
+#1043 07_War_Golem_07_07
+
+<common neutrals>
+#2001 00_Wisp_01_01
+#2002 01_Abusive_Sergeant_02_01 BATTLECRY: Give a minion +2 Attack this turn.
+#2003 01_Argent_Squire_01_01 DIVINE SHIELD
+#2004 01_Leper_Gnome_02_01 DEATHRATTLE: Deal 2 damage to the enemy hero.
+#2005 02_Shieldbearer_00_04 TAUNT
+#2006 01_Southsea_Deckhand_02_01 Has Charge while you have a weapon equipped.
+#2007 01_Worgen_Infiltrator_02_01 STEALTH
+#2008 01_Young_Dragonhawk_01_01 WINDFURY
+#2009 02_Amani_Berserker_02_03 ENRAGE: +3 Attack
+#2010 02_Bloodsail_Raider_02_03 BATTLECRY: Gain Attack equal to the Attack of your weapon.
+#2011 02_Dire_Wolf_Alpha_02_02 Adjacent minions have +1 Attack.
+#2012 02_Faerie_Dragon_03_02 ELUSIVE
+#2013 02_Ironbeak_Owl_02_01 BATTLECRY: Silence a minion.
+#2014 02_Loot_Hoarder_02_01 DEATHRATTLE: Draw a card.
+#2015 02_Mad_Bomber_03_02 BATTLECRY: Deal 3 damage randomly split between all other characters.
+#2016 02_Youthful_Brewmaster_03_02 BATTLECRY: Return a friendly minion from the battlefield to your hand.
+#2017 03_Acolyte_of_Pain_01_03 Whenever this minion takes damage, draw a card.
+#2018 03_Earthen_Rin_Farseer_03_03 BATTLECRY: Restore 3 Health.
+#2019 03_Flesheating_Ghoul_02_03 Whenever a minion dies, gain +1 Attack.
+#2020 03_Harvest_Golem_02_03 DEATHRATTLE: Summon a 2/1 Damaged Golem.
+#2021 03_Jungle_Panther_04_02 STEALTH
+#2022 03_Raging_Worgen_03_03 ENRAGE: Windfury and +1 Attack
+#2023 03_Scarlet_Crusader_03_01 DIVINE SHIELD
+#2024 03_Tauren_Warrior_02_03 TAUNT. ENRAGE: +3 Attack
+#2025 03_Thrallmar_Farseer_02_03 WINDFURY
+#2026 04_Ancient_Brewmaster_05_04 BATTLECRY: Return a friendly minion from the battlefield to your hand.
+#2027 04_Cult_Master_04_02 After a friendly minion dies, draw a card.
+#2028 04_Dark_Iron_Dwarf_04_04 BATTLECRY: Give a minion +2 Attack this turn.
+#2029 04_Dread_Corsair_03_03 TAUNT Costs (1) less per Attack of your weapon.
+#2030 04_Mogu'shan_Warden_01_07 TAUNT
+#2031 04_Silvermoon_Guardian_03_03 DIVINE SHIELD
+#2032 04_Spellbreaker_04_03 BATTLECRY: Silence a minion.
+#2033 05_Fen_Creeper_03_06 TAUNT
+#2034 05_Silver_Hand_Knight_04_04 BATTLECRY: Summon a 2/2 Squire.
+#2035 05_Spiteful_Smith_04_06 ENRAGE: Your weapon has +2 Attack.
+#2036 05_Stranglethorn_Tiger_05_05 STEALTH
+#2037 05_Venture_Co._Mercenary_07_06 Your minions cost (3) more.
+#2038 06_Frost_Elemental_05_05 BATTLECRY: Freeze a character.
+#2039 06_Priestess_of_Elune_05_04 BATTLECRY: Restore 4 Health to your hero.
+#2040 06_Windfury_Harpy_04_05 WINDFURY
+
+<rare neutrals>
+#3001 01_Angry_Chicken_01_01 ENRAGE: +5 Attack.
+#3002 01_Bloodsail_Corsair_01_02 BATTLECRY: Remove 1 Durability from your opponent's weapon
+#3003 01_Lightwarden_01_02 Whenever a character is healed, gain +2 Attack.
+#3004 01_Murloc_Tidecaller_01_02 Whenever a Murloc is summoned, gain +1 Attack.
+#3005 01_Secretkeeper_01_02 Whenever a Secret is played, gain +1/+1
+#3006 01_Young_Priestess_02_01 At the end of your turn, give another random friendly minion +1 Health.
+#3007 02_Ancient_Watcher_04_05 Can't attack.
+#3008 02_Crazed_Alchemist_02_02 BATTLECRY: Swap the Attack and Health of a minion.
+#3009 02_Knife_Juggler_03_02 After your summon a minion, deal 1 damage to a random enemy.
+#3010 02_Mana_Addict_01_03 Whenever you cast a spell, gain +2 Attack this turn.
+#3011 02_Mana_Wraith_02_02 ALL minions cost (1) more
+#3012 02_Master_Swordsmith_01_03 At the end of your turn, give another friendly minion +1 Attack.
+#3013 02_Pint-Sized_Summoner_02_02 The first minion you play each turn costst (1) less.
+#3014 02_Sunfury_Protector_02_03 BATTLECRY: Give adjacent minions Taunt.
+#3015 02_Wild_Pyromancer_03_02 After you cast a spell, deal 1 damage to ALL minions.
+#3016 03_Alarm-o-Bot_00_03 At the start of your turn, swap this minion with a random one in your hand.
+#3017 03_Arcane_Golem_04_02 CHARGE. BATTLECRY: Give your opponent a Mana Crystal.
+#3018 03_Coldlight_Oracle_02_02 BATTLECRY: Each player draws 2 cards.
+#3019 03_Coldlight_Seer_02_03 BATTLECRY: Give ALL other Murlocs +2 Health.
+#3020 03_Demolisher_01_04 At the start of your turn, deal 2 damage to a random enemy.
+#3021 03_Emperor_Cobra_02_03 POISONOUS
+#3022 03_Imp_Master_01_05 At the end of your turn, deal 1 damage to this minion and summon a 1/1 Imp.
+#3023 03_Injured_Blademaster_04_07 BATTLECRY: Deal 4 damage to HIMSELF.
+#3024 03_Mind_Control_Tech_03_03 BATTLECRY: If your opponent has 4 or more minions, take control of one at random.
+#3025 03_Questing_Adventurer_02_02 Whenever you play a card, gain +1/+1
+#3026 04_Ancient_Mage_02_05 BATTLECRY: Give adjacent minions Spell Damage +1.
+#3027 04_Defender_of_Argus_02_03 BATTLECRY: Give adjacent minions +1/+1 and Taunt.
+#3028 04_Twilight_Drake_04_01 BATTLECRY: Gain +1 Health for each card in your hand.
+#3029 04_Violet_Teacher_03_05 Whenever you cast a spell, summon a 1/1 Violet Apprentice.
+#3030 05_Abomination_04_04 TAUNT. DEATHRATTLE: Deal 2 damage to ALL characters.
+#3031 05_Azure_Drake_04_04 SPELL DAMAGE +1. BATTLECRY: Draw a card.
+#3032 05_Gadgetzan_Auctioneer_04_04 Whenever you cast a spell, draw a card.
+#3033 05_Stampeding_Kodo_03_05 BATTLECRY: Destroy a random enemy minion with 2 or less Attack.
+#3034 06_Argent_Commander_04_02 CHARGE. DIVINE SHIELD
+#3035 06_Sunwalker_04_05 TAUNT. DIVINE SHIELD
+#3036 07_Ravenholdt_Assassin_07_05 STEALTH
+
+
+<epic neutrals>
+#4001 01_Hungry_Crab_01_02 BATTLECRY: Destroy a Murloc and gain +2/+2.
+#4002 02_Captain's_Parrot_01_01 BATTLECRY: Draw a Pirate from your deck.
+#4003 02_Doomsayer_00_07 At the start of your turn, destroy ALL minions.
+#4004 03_Big_Game_Hunter_04_02 BATTELCRY: Destroy a minion with 7 or more Attack.
+#4005 03_Blood_Knight_03_03 BATTLECRY: All mininos lose Divine Shield. Gain +3/+3 for each Shield lost.
+#4006 03_Murloc_Warleader_03_03 ALL other Murlocs have +2/+1.
+#4007 03_Southsea_Captain_03_03 Your other Pirates have +1/+1.
+#4008 05_Faceless_Manipulator_03_03 BATTLECRY: Choose a minion and become a copy of it.
+#4009 10_Sea_Giant_08_08 Costs (1) less for each other minion on the battlefield.
+#4010 12_Moutain_Giant_08_08 Costs (1) less for each other card in your hand.
+#4011 20_Molten_Giant_08_08 Costs (1) less for each damage your hero has taken.
+
+<legendary neutrals>
+#5001 02_Bloodmage_Thalnos_01_01 SPELL DAMAGE +1. DEATHRATTLE: Draw a card.
+#5002 02_Lorewalker_Cho_00_04 Whenever a player casts a spell, put a copy into the other player's hand.
+#5003 02_Millhouse_Manastorm_04_04 BATTLECRY: Enemy spells costs (0) next turn.
+#5004 02_Nat_Pagle_00_04 At the start of your turn, you have a 50% chance to draw an extra card.
+#5005 03_King_Mukla_05_05 BATTLECRY: Give you opponent 2 Bananas.
+#5006 03_Tinkmaster_Overspark_03_03 BATTLECRY: Transform another random minion into a 5/5 Devisaur or a 1/1 Squirrel.
+#5007 04_Leeroy_Jenkins_06_02 CHARGE. BATTLECRY: Summon two 1/1 Whelps for your opponent.
+#5008 04_Old_Murk-Eye_02_04 CHARGE. Has +1 Attack for each other Murloc on the battlefield.
+#5009 05_Captain_Greenskin_05_04 BATTLECRY: Give your weapon +1/+1.
+#5010 05_Elite_Tauren_Chieftain_05_05 BATTLECRY: Give both players the power to ROCK (with a Power Chord card)
+#5011 05_Harrison_Jones_05_04 BATTLECRY: Destroy your opponent's weapon and draw cards equal to its Durability.
+#5012 06_Cairne_Bloodhoof_04_05 DEATHRATTLE: Summon a 4/5 Baine Bloodhoof.
+#5013 06_Gelbin_Mekkatorque_06_06 BATTLECRY: Summon an AWESOME invention.
+#5014 06_Hogger_04_04 At the end of your turn, summon a 2/2 Gnoll with Taunt.
+#5015 06_Illidan_Stormrage_07_05 Whenever you play a card, summon a 2/1 Flame of Azzinoth.
+#5016 06_Sylvanas_Windrunner_05_05 DEATHRATTLE: Take control of a random enemy minion.
+#5017 06_The_Beast_09_07 DEATHRATTLE: Summon a 3/3 Pip Quickwit for your opponent.
+#5018 06_The_Black_Knight_04_05 BATTLECRY: Destroy an enemy minion with Taunt.
+#5019 07_Baron_Geddon_07_05 At the end of your turn, deal 2 damage to ALL other characters.
+#5020 08_Gruul_07_07 At the end of each turn, gain +1/+1.
+#5021 08_Ragnaros_the_Firelord_08_08 Can't attack. At the end of your turn, deal 8 damage to a random enemy.
+#5022 09_Alexstrasza_08_08 BATTLECRY: Set a hero's remaining Health to 15.
+#5023 09_Malygos_04_12 SPELL DAMAGE +5
+#5024 09_Nozdormu_08_08 Players only have 15 seconds to take their turns.
+#5025 09_Onyxia_08_08 BATTLECRY: Summon a 1/1 Whelps until your side of the battlefield is full.
+#5026 09_Ysera_04_12 At the end of your turn, add a Dream Card to your hand.
+#5027 10_Deathwing_12_12 BATTLECRY: Destroy all other minions and discard your hand.
+
+<druid cards>
+#1101 00_Innervate Gain 2 Mana Crystals this turn only.
+#1102 00_Moonfire Deal 1 damage.
+#1103 01_Claw Give your hero +2 Attack this turn. Gain 2 Armor.
+#1104 02_Mark_of_the_Wild Give a minion Taunt and +2/+2.
+#1105 02_Wild_Growth Gain an empty Mana Crystal.
+#1106 03_Healing_Touch Restore 8 Health.
+#1107 03_Savage_Roar Give your characters +2 Attack this turn.
+#1108 04_Swipe Deal 4 damage to an enemy and 1 damage to all other enemies.
+#1109 06_Starfire Deal 5 damage. Draw a card.
+#1110 08_Ironbark_Protector_08_08 TAUNT
+#2101 01_Naturalize Destroy a minion. Your opponent draws 2 cards.
+#2102 02_Power_of_the_Wild CHOOSE ONE - Give your minions +1/+1; or Summon a 3/2 Panther.
+#2103 02_Wrath CHOOSE ONE - Deal 3 damage to a minion; or 1 damage and draw a card.
+#2104 03_Mark_of_Nature CHOOSE ONE - Give a minion +4 Attack; or +4 Health and Taunt.
+#2105 04_Soul_of_the_forest Give your minions "Deathrattle: Summon a 2/2 Treant."
+#2106 05_Druid_of_the_Claw_04_04 CHOOSE ONE - Charge; or +2 Health and Taunt.
+#3101 01_Savagery Deal damage equal to your hero's Attack to a minion.
+#3102 04_Bite Give your hero +4 Attack this turn. Gain 4 Armor.
+#3103 04_Keeper_of_the_Grove_02_04 CHOOSE ONE - Deal 2 damage; or Silence a minion.
+#3104 05_Nourish CHOOSE ONE - Gain 2 Mana Crystals; or Draw 3 cards.
+#3105 05_Starfall CHOOSE ONE - Deal 5 damage to a minion; or 2 damage to all enemy minions.
+#4101 06_Force_of_Nature Summon three 2/2 Treants with Charge that die at the end of the turn.
+#4102 07_Ancient_of_Lore_05_05 CHOOSE ONE - Draw 2 cards; or Restore 5 Health.
+#4103 07_Ancient_of_War_05_05 CHOOSE ONE - +5 Attack; or +5 Health and Taunt.
+#5101 09_Cenarius_05_08 CHOOSE ONE - Give your other minions +2/+2; or Summon two 2/2 Treants with Taunt.
+
+<hunter cards>
+#1201 00_Hunter's_Mark Change a minion's Health to 1.
+#1202 01_Arcane_Shot Deal 2 damage.
+#1203 01_Timber_Wolf_01_01 Your other Beasts have +1 Attack.
+#1204 01_Tracking Look at the top 3 cards of your deck. Draw one and discard the others.
+#1205 02_Starving_Buzzard_02_01 Whenever you summon a Beast, draw a card.
+#1206 03_Animal_Companion Summon a random Beast Companion.
+#1207 03_Kill_Command Deal 3 damage. If you control a Beast, deal 5 damage instead.
+#1208 04_Houndmaster_04_03 BATTLECRY: Give a friendly Beast +2/+2 and Taunt.
+#1209 04_Multi-Shot Deal 3 damage to two random enemy minions
+#1210 05_Tundra_Rhino_02_05 Your Beasts have Charge.
+#2201 02_Explosive_Trap SECRET: When your hero is attacked, deal 2 damage to all enemies.
+#2202 02_Freezing_Trap SECRET: When an enemy minion attacks, return it to its owner's hand. It costs (2) more.
+#2203 02_Scavenging_Hyena_02_02 Whenever a friendly Beast dies, gain +2/+1.
+#2204 02_Snipe SECRET: After your opponent plays a minion, deal 4 damage to it.
+#2205 03_Deadly_Shot Destroy a random enemy minion.
+#2206 03_Unleash_the_Hounds For each enemy minion, summon a 1/1 Hound with Charge.
+#3201 01_Flare All minions lose Stealth. Destroy all enemy Secrets. Draw a card.
+#3202 02_Misdirection SECRET: When an enemy attacks your hero, instead it attacks another random character.
+#3203 03_Eaglehorn_Bow_3_2 Whenever a Secret is revealed, gain +1 Durability.
+#3204 05_Exposive_Shot Deal 5 damage to a minion and 2 damage to adjacent ones.
+#3205 06_Savannah_Highmane_06_05 DEATHRATTLE: Summon two 2/2 Hyenas.
+#4201 01_Bestial_Wrath Give a Beast +2 Attack and Immune this turn.
+#4202 02_Snake_Trap SECRET: When one of your minions is attacked, summon three 1/1 Snakes.
+#4203 07_Gladiator's_Longbow_5_2 Your hero is Immune while attacking.
+#5201 09_King_Krush_08_08 CHARGE
+
+<mage cards>
+#1301 01_Arcane_Missiles Deal 3 damage randomly split among all enemy characters.
+#1302 01_Mirror_Image Summon two 0/2 minions with Taunt.
+#1303 02_Arcane_Explosion Deal 1 damage to all enemy minions.
+#1304 02_Frostbolt Deal 3 damage to a character and Freeze it.
+#1305 03_Arcane_Intellect Draw 2 cards.
+#1306 03_Frost_Nova Freeze all enemy minions.
+#1307 04_Fireball Deal 6 damage.
+#1308 04_Polymorph Transform a minion into a 1/1 Sheep.
+#1309 04_Water_Elemental_03_06 Freeze any character damanged by this minion.
+#1310 07_Flamestrike Deal 4 damage to all enemy minions.
+#2311 01_Ice_Lance Freeze a character. If it was already Frozen, deal 4 damage instead.
+#2312 01_Mana_Wyrm_01_03 Whenever you cast a spell, gain +1 Attack.
+#2313 02_Sorcerer's_Apprentice_03_02 Your spells cost (1) less.
+#2314 03_Ice_Barrier SECRET: As soon as your hero is attacked, gain 8 Armor.
+#2315 03_Mirror_Entity SECRET: When your opponent plays a minion, summon a copy of it.
+#2316 04_Cone_of_Cold Freeze a minion and the minions next to it, and deal 1 damage to them.
+#3301 03_Counterspell SECRET: When your opponent casts a spell, Counter it.
+#3302 03_Kirin_Tor_Mage_04_03 BATTLECRY: The next Secret you play this turn costs (0).
+#3303 03_Vaporize SECRET: When a minion attacks your hero, destroy it.
+#3304 04_Ethereal_Arcanist_03_03 If you control a Secret at the end of your turn, gain +2/+2.
+#3305 06_Blizzard Deal 2 damage to all enemy minions and Freeze them.
+#4301 03_Ice_Block SECRET: When your hero takes fatal damage, prevent it and become Immune this turn.
+#4302 03_Spellbender SECRET: WHen an enemy casts a spell on a minion, summon a 1/3 as the new target.
+#4303 10_Pyroblast Deal 10 damage.
+#5301 07_Archmage_Antonidas_05_07 Whenever you cast a spell, add a 'Fireball' spell to your hand.
+
+<paladin cards>
+#1401 01_Blessing_of_Might Give a minion +3 Attack.
+#1402 01_Hand_of_Protection Give a minion Divine Shield.
+#1403 01_Humility Change a minion's Attack to 1.
+#1404 01_Light's_Justice_1_4
+#1405 02_Holy_Light Restore 6 Health.
+#1406 04_Blessing_of_Kings Give a minion +4/+4.
+#1407 04_Consecration Deal 2 damage to all enemies.
+#1408 04_Hammer_of_Wrath Deal 3 damage. Draw a card.
+#1409 04_Truesilver_Champion_4_2 Whenever your hero attacks, retore 2 Health to it.
+#1410 07_Guardian_of_Kings_05_06 BATTLECRY: Restore 6 Health to your hero.
+#2401 01_Blessing_of_Widsom Choose a minion. Whenever it attacks, draw a card.
+#2402 01_Eye_for_an_Eye SECRET: When your hero takes damage, deal that much damage to the enemy hero.
+#2403 01_Noble_Sacrifice SECRET: When an enemy attacks, summon a 2/1 Defender as the new target.
+#2404 01_Redemption SECRET: When a friendly minion dies, return it to life with 1 Health.
+#2405 01_Repentance SECRET: After your opponent plays a minion, reduce its Health to 1.
+#2406 02_Argent_Protector_02_02 BATTLECRY: Give a friendly minion Divine Shield.
+#3401 02_Equality Change the Health of ALL minions to 1.
+#3402 03_Aldor_Peacekeeper_03_03 BATTLECRY: Change an enemy minion's Attack to 1.
+#3403 03_Divine_Favor Draw cards until you have as many in hand as your opponent.
+#3404 05_Blessed_Champion Double a minion's Attack.
+#3405 05_Holy_Wrath Draw a card and deal damage equal to its Cost.
+#4401 03_Sword_of_Justice_1_5 After you summon a minion, give it +1/+1 and this loses 1 Durability.
+#4402 06_Avenging_Wrath Deal 8 damage split among all enemy characters.
+#4403 08_Lay_on_Hands Restore 8 Health. Draw 3 cards.
+#5401 08_Tirion_Fordring_06_06 DIVINE SHIELD. TAUNT. DEATHRATTLE: Equip a 5/3 Ashbringer.
+
+<priest cards>
+#1501 01_Holy_Smite Deal 2 damage.
+#1502 01_Mind_Vision Put a copy of a random card in your opponent's hand into your hand.
+#1503 01_Power_Word:_Shield Give a minion +2 Health. Draw a card.
+#1504 02_Shadow_Word:_Pain Destroy a minion with 3 or less Attack.
+#1505 03_Shadow_Word:_Death Destroy a minion with 5 or more Attack.
+#1506 05_Holy_Nova Deal 2 damage to all ennemies. Restore 2 Health to all friendly characters.
+#1507 10_Mind_Control Take control of an enemy minion.
+#2501 00_Circle_of_Healing Restore 4 Health to ALL minions.
+#2502 00_Silence Silence a minion.
+#2503 01_Inner_Fire Change a minion's Attack to be equal to its Health.
+#2504 01_Northshire_Cleric_01_03 Whenever a minion is healed, draw a card.
+#2505 02_Divine_Spirit Double a minion's Health.
+#2506 02_Mind_Blast Deal 5 damage to the enemy hero.
+#2507 03_Thoughtsteal Copy 2 cards in your opponent's deck and add them to your hand.
+#2508 04_Lightspawn_00_05 This minion's Attack is always equal to its Health.
+#2509 06_Temple_Enforcer_06_06 BATTLECRY: Give a friendly minion +3 Health.
+#3501 02_Lightwell_00_05 At the start of your turn, restore 3 Health to a damaged friendly character.
+#3502 04_Auchenai_Soulpriest_03_05 Your cards and powers that restore Health now deal damage instead.
+#3503 04_Mass_Dispel Silence all enemy minions. Draw a card.
+#3504 04_Shadow_Madness Gain control of an enemy minion with 3 or less Attack until end of turn.
+#3505 06_Holy_Fire Deal 5 damage. Restore 5 Health to your hero.
+#4501 03_Shadowform Your Hero Power becomes 'Deal 2 damage.' If already in Shadowform: 3 damage.
+#4501 04_Mindgames Put a copy of a random minion from your opponent's deck into the battlefield.
+#4501 06_Cabal_Shadow_Priest_04_05 BATTLECRY: Take control of an enemy minion that has 2 or less Attack.
+#5501 07_Prophet_Velen_07_07 Double the damage and healing of your spells and Hero Power.
+
+<rogue cards>
+#1601 00_Backstab Deal 2 damage to an undamaged minion.
+#1602 01_Deadly_Poison Give your weapon +2 Attack.
+#1603 01_Sinister_Strike Deal 3 damage to the enemy hero.
+#1604 02_Sap Return an enemy minion to your opponent's hand.
+#1605 02_Shiv Deal 1 damage. Draw a card.
+#1606 03_Fan_of_Knives Deal 1 damage to all enemy minions. Draw a card.
+#1607 05_Assassin's_Blade_3_4
+#1608 05_Assassinate Destroy an enemy minion.
+#1609 07_Sprint Draw 4 cards.
+#2601 00_Shadowstep Return a friendly minion to your hand. It costs (2) less.
+#2602 01_Cold_Blood Give a minion +2 Attack. COMBO: +4 Attack instead.
+#2603 01_Conceal Give your minions Stealth until your next turn.
+#2604 02_Betrayal Force an enemy minion to deal its damage to the minions next to it.
+#2604 02_Defias_Ringleader_03_02 COMBO: Summon a 2/1 Defias Bandit.
+#2605 02_Eviscerate Deal 2 damage. COMBO: Deal 4 damage instead.
+#2606 06_Vanish Return all minions to their owner's hand.
+#3601 02_Blade_Flurry Destroy your weapon and deal its damage to all enemies.
+#3602 03_Headcrack Deal 2 damage to the enemy hero. COMBO: Return this to your hand next turn.
+#3603 03_Perdition's_Blade_2_2 BATTLECRY: Deal 1 damage. COMBO: Deal 2 instead.
+#3604 03_SI:7_Agent_03_03 COMBO: Deal 2 damage.
+#3605 04_Master_of_Disguise_04_04 BATTLECRY: Give a friendly minion Stealth.
+#4601 00_Preparation The next spell you cacst this turn costs (3) less.
+#4602 02_Patient_Assassin_01_01 STEALTH. POISONOUS
+#4603 06_Kidnapper_05_03 COMBO: Return a minion to its owner's hand.
+#5601 03_Edwin_VanCleef_02_02 COMBO: Gain +2/+2 for each card played earlier this turn.
+
+<shaman cards>
+#1701 00_Ancestral_Healing Restore a minion to full Health and give it Taunt.
+#1702 00_Totemic_Might Give your Totems +2 Health.
+#1703 01_Frost_Shock Deal 1 damage to an enemy character and Freeze it.
+#1704 01_Rockbiter_Weapon Give a friendly character +3 Attack this turn.
+#1705 02_Flametongue_Totem Adjacent minions have +2 Attack.
+#1706 02_Windfury Give a minion Windfury.
+#1707 03_Hex Transform a minion into a 0/1 Frog with Taunt.
+#1708 04_Windspeaker_03_03 BATTLECRY: Give a friendly minion Windfury.
+#1709 05_Bloodlust Give your minions +3 Attack this turn.
+#1710 06_Fire_Elemental_06_05 BATTLECRY: Deal 3 damage.
+#2701 01_Dust_Devil_03_01 WINDFURY. OVERLOAD (2)
+#2702 01_Earth_Shock Silence a minion, then deal 1 damage to it.
+#2703 01_Forked_Lightning Deal 2 damage to 2 random enemy minions. OVERLOAD: (2)
+#2704 01_Lightning_Bolt Deal 3 damage. OVERLOAD: (1)
+#2705 02_Stormforged_Axe_2_3 OVERLOAD: (1)
+#2706 03_Unbound_Elemental_02_04 Whenever you play a card with Overload, gain +1/+1.
+#3701 02_Ancestral_Spirit Choose a minion. When that minion is destroyed, return it to the battlefield.
+#3702 03_Feral_Spirit Summon two 2/3 Spirit Wolves with Taunt. OVERLOAD: (2)
+#3703 03_Lava_Burst Deal 5 damage. OVERLOAD: (2)
+#3704 03_Lightning_Storm Deal 2-3 damage to all denemy minions. OVERLOAD: (2)
+#3705 03_Mana_Tide_Totem_00_03 At the end of your turn, draw a card.
+#4701 03_Far_Sight Draw a card. That card costs (3) less.
+#4702 05_Doomhammer_2_8 WINDFURY. OVERLOAD: (2)
+#4703 05_Earth_Elemental_07_08 TAUNT. OVERLOAD: (3)
+#5701 08_Al'Akir_the_Windlord_03_05 CHARGE. DIVINE SHIELD. TAUNT. WINDFURY
+
+<warlock cards>
+#1801 00_Sacrificial_Pact Destroy a Demon. Restore 5 Health to your hero.
+#1802 00_Soulfire Deal 4 damage. Discard a random card.
+#1803 01_Corruption Choose an enemy minion. At the start of your turn, destroy it.
+#1804 01_Mortal_Coil Deal 1 damage to a minion. If that kills it, draw a card.
+#1805 01_Voidwalker_01_03 TAUNT
+#1806 02_Felstalker_04_03 BATTLECRY: Discard a random card.
+#1807 03_Drain_Life Deal 2 damage. Restore 2 Health to your hero.
+#1808 03_Shadow_Bolt Deal 4 damage to a minion.
+#1809 04_Hellfire Deal 3 damage to ALL characters.
+#1810 06_Dread_Infernal_06_06 BATTLECRY: Deal 1 damage to ALL other characters.
+#2801 01_Blood_Imp_00_01 STEALTH. At the end of your turn, give another random friendly minion +1 Health.
+#2802 01_Flame_Imp_03_02 BATTLECRY: Deal 3 damage to your hero.
+#2803 01_Power_Overwhelming Give a friendly minion +4/+4 until end of turn. Then, it dies. Horribly.
+#2804 02_Demonfire Deal 2 damage to a minion. If it's a friendly Demon, give it +2/+2 instead.
+#2805 03_Sense_Demons Draw 2 Demons from your deck.
+#2806 04_Summoning_Portal_00_04 Your minions cost (2) less, but not less than (1).
+#3801 03_Felguard_03_05 TAUNT. BATTLECRY: Destroy one of your Mana Crystals.
+#3802 03_Void_Terror_03_03 BATTLECRY: Destroy both adjacent minions and gain their Attack an Health.
+#3803 04_Shadowflame Destroy a friendly minion and deal its Attack damage to all enemy minions.
+#3804 05_Doomguard_05_07 CHARGE. BATTLECRY: Discard two random cards.
+#3805 06_Siphon_Soul Destroy a minion. Restore 3 Health to your hero.
+#4801 04_Pit_Lord_05_06 BATTLECRY: Deal 5 damage to your hero.
+#4802 05_Bane_of_Doom Deal 2 damage to a character. If that kills it, summon a random Demon.
+#4803 08_Twisting_Nether Destroy all minions.
+#5801 09_Lord_Jaraxxus_03_15 BATTLECRY: Destroy your hero and replace it with Lord Jaraxxus.
+
+<warrior cards>
+#1901 01_Execute Destroy a damaged enemy minion.
+#1902 01_Whirlwind Deal 1 damage to ALL minions.
+#1903 02_Cleave Deal 2 damage to two random enemy minions.
+#1904 02_Fiery_War_Axe_3_2
+#1905 02_Heroic_Strike Give your hero +4 Attack this turn.
+#1906 03_Charge Give a friendly minion +2 Attack and Charge.
+#1907 03_Shield_Block Gain 5 Armor. Draw a card.
+#1908 03_Warsong_Commander_02_03 Whenever you summon a minion with 3 or less Attack, give it Charge.
+#1909 04_Kor'kron_Elite_04_03 CHARGE
+#1910 05_Arcanite_Reaper_5_2
+#2901 00_Inner_Rage Deal 1 damage to a minion and give it +2 Attack.
+#2902 02_Battle_Rage Draw a card for each damaged friendly character.
+#2903 02_Cruel_Taskmaster_02_02 BATTLECRY: Deal 1 damage to a minion and give it +2 Attack.
+#2904 02_Rampage Give a damaged minion +3/+3
+#2905 02_Slam Deal 2 damage to a minion. If it survives, draw a card.
+#2906 04_Arathi_Weaponsmith_03_03 BATTLECRY: Equip a 2/2 weapon.
+#3901 01_Upgrade! If you have a weapon, give it +1/+1. Otherwise equip a 1/3 weapon.
+#3902 02_Armorsmith_01_04 Whenever a friendly minion takes damage, gain 1 Armor.
+#3903 02_Commading_Shout Your minions can't be reduce below 1 Health this turn. Draw a card.
+#3904 03_Frothing_Berserker_02_04 Whenever a minion takes damage, gain +1 Attack.
+#3905 04_Mortal_Strike Deal 4 damage. If you have 12 or less Health, deal 6 instead.
+#4901 01_Shield_Slam Deal 1 damage to a minion for each Armor you have.
+#4902 05_Brawl Destroy all minions except one. (chosen randomly)
+#4903 07_Gorehowl_7_1 Attacking a minion costs 1 Attack instead of 1 Durability.
+#5901 08_Grommash_Hellscream_04_09 CHARGE. ENRAGE: +6 Attack
+
