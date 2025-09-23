@@ -1,5 +1,6 @@
 - Only classic set cards (392 collectible cards including 25 per class)
   -> cards from pre-Naxx, no changes past that
+  -> v1.0.0.5834
   -> https://hearthstone.wiki.gg/wiki/Classic_format
   -> https://hearthstone-decks.net/classic.deck/
 

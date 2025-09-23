@@ -160,9 +160,50 @@ Pour créer les différents sets/sub-sets:
 
 2) Déduire programmatiquement certains sub-sets
 
+---
+
+#define DEF_TYPE(new_type, alias_type) \
+    struct new_type { \
+        alias_type val; \
+        new_type() = default; \
+        new_type(alias_type val) : val(val){} \
+        operator alias_type() const {return val;} \
+    }
 
 
+DEF_TYPE(CardId, uint16_t);
 
+DEF_TYPE(BoardPosition, uint8_t); // from 1 up to 7
+
+DEF_TYPE(HandPosition, uint8_t); // from 1 up to 10
+
+---
+
+L'état / progression de la partie sous la forme d'un historique
+de logs.
+  -> 1 ligne par log
+
+A partir du moment où on joue une carte, on fournit
+une cible (par défaut NULL <=> aucune),
+1 à 7 pour cibler une carte sur le plateau joueur,
+-1 à -7 pour cibler une carte sur le plateau ennemi,
+8 et -8 pour cibler les héros respectifs.
+
+re-entrant game play
+
+GameState
+  -> player
+    -> board
+    -> hero
+      -> attack
+      -> health
+    -> hero power
+    -> hand
+    -> deck
+    -> mana
+  -> ai
+    -> ...
+  -> turn
 
 
 
