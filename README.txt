@@ -5,7 +5,7 @@ cat CARDS.txt | perl -ne 'print "$1\t$2\t$3\n" if $_ =~ /^(#\S+) (\S+) (.*)?$/' 
 # all cards sorted by cost and name
 cat CARDS.txt | perl -ne 'print "$1\t$2\t$3\n" if $_ =~ /^(#\S+) (\S+) (.*)?$/' | sort -k2 | column -ts $'\t'
 
-# all legendary cards sorted by cost and name
+# all neutral legendary cards sorted by cost and name
 cat CARDS.txt | perl -ne 'print "$1\t$2\t$3\n" if $_ =~ /^(#50\S+) (\S+) (.*)?$/' | sort -k2 | column -ts $'\t'
 
 # all weapons sorted by rarity, class, cost and name
