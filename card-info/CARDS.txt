@@ -33,7 +33,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 <free neutrals>
 #1001 01_Elven_Archer_01_01 BATTLECRY: Deal 1 damage.
 #1002 01_Goldshire_Footman_01_02 TAUNT
-#1003 01_Grimscale_Oracle_01_01 ALL other Murlocs have +1 Attack.
+#1003 01_Grimscale_Oracle_01_01 all other Murlocs have +1 Attack.
 #1004 01_Murloc_Raider_02_01
 #1005 01_Stonetusk_Boar_01_01 CHARGE
 #1006 01_Voodoo_Doctor_02_01 BATTLECRY: Restore 2 Health.
@@ -51,7 +51,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #1018 03_Magma_Rager_05_01
 #1019 03_Raid_Leader_02_02 Your other minions have +1 Attack.
 #1020 03_Razorfen_Hunter_02_03 BATTLECRY: Summon a 1/1 Boar.
-#1021 03_Shattered_Sun_Cleric_03_02 BALLECRY: Give a friendly minion +1/+1.
+#1021 03_Shattered_Sun_Cleric_03_02 BATTLECRY: Give a friendly minion +1/+1.
 #1022 03_Silverback_Patriarch_01_04 TAUNT
 #1023 03_Wolfrider_03_01 CHARGE
 #1024 04_Chillwind_Yeti_04_05
@@ -128,15 +128,15 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #3008 02_Crazed_Alchemist_02_02 BATTLECRY: Swap the Attack and Health of a minion.
 #3009 02_Knife_Juggler_03_02 After your summon a minion, deal 1 damage to a random enemy.
 #3010 02_Mana_Addict_01_03 Whenever you cast a spell, gain +2 Attack this turn.
-#3011 02_Mana_Wraith_02_02 ALL minions cost (1) more
+#3011 02_Mana_Wraith_02_02 all minions cost (1) more
 #3012 02_Master_Swordsmith_01_03 At the end of your turn, give another friendly minion +1 Attack.
 #3013 02_Pint-Sized_Summoner_02_02 The first minion you play each turn costst (1) less.
 #3014 02_Sunfury_Protector_02_03 BATTLECRY: Give adjacent minions Taunt.
-#3015 02_Wild_Pyromancer_03_02 After you cast a spell, deal 1 damage to ALL minions.
+#3015 02_Wild_Pyromancer_03_02 After you cast a spell, deal 1 damage to all minions.
 #3016 03_Alarm-o-Bot_00_03 At the start of your turn, swap this minion with a random one in your hand.
 #3017 03_Arcane_Golem_04_02 CHARGE. BATTLECRY: Give your opponent a Mana Crystal.
 #3018 03_Coldlight_Oracle_02_02 BATTLECRY: Each player draws 2 cards.
-#3019 03_Coldlight_Seer_02_03 BATTLECRY: Give ALL other Murlocs +2 Health.
+#3019 03_Coldlight_Seer_02_03 BATTLECRY: Give all other Murlocs +2 Health.
 #3020 03_Demolisher_01_04 At the start of your turn, deal 2 damage to a random enemy.
 #3021 03_Emperor_Cobra_02_03 POISONOUS
 #3022 03_Imp_Master_01_05 At the end of your turn, deal 1 damage to this minion and summon a 1/1 Imp.
@@ -147,7 +147,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #3027 04_Defender_of_Argus_02_03 BATTLECRY: Give adjacent minions +1/+1 and Taunt.
 #3028 04_Twilight_Drake_04_01 BATTLECRY: Gain +1 Health for each card in your hand.
 #3029 04_Violet_Teacher_03_05 Whenever you cast a spell, summon a 1/1 Violet Apprentice.
-#3030 05_Abomination_04_04 TAUNT. DEATHRATTLE: Deal 2 damage to ALL characters.
+#3030 05_Abomination_04_04 TAUNT. DEATHRATTLE: Deal 2 damage to all characters.
 #3031 05_Azure_Drake_04_04 SPELL DAMAGE +1. BATTLECRY: Draw a card.
 #3032 05_Gadgetzan_Auctioneer_04_04 Whenever you cast a spell, draw a card.
 #3033 05_Stampeding_Kodo_03_05 BATTLECRY: Destroy a random enemy minion with 2 or less Attack.
@@ -155,14 +155,13 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #3035 06_Sunwalker_04_05 TAUNT. DIVINE SHIELD
 #3036 07_Ravenholdt_Assassin_07_05 STEALTH
 
-
 <epic neutrals>
 #4001 01_Hungry_Crab_01_02 BATTLECRY: Destroy a Murloc and gain +2/+2.
 #4002 02_Captain's_Parrot_01_01 BATTLECRY: Draw a Pirate from your deck.
-#4003 02_Doomsayer_00_07 At the start of your turn, destroy ALL minions.
-#4004 03_Big_Game_Hunter_04_02 BATTELCRY: Destroy a minion with 7 or more Attack.
+#4003 02_Doomsayer_00_07 At the start of your turn, destroy all minions.
+#4004 03_Big_Game_Hunter_04_02 BATTLECRY: Destroy a minion with 7 or more Attack.
 #4005 03_Blood_Knight_03_03 BATTLECRY: All mininos lose Divine Shield. Gain +3/+3 for each Shield lost.
-#4006 03_Murloc_Warleader_03_03 ALL other Murlocs have +2/+1.
+#4006 03_Murloc_Warleader_03_03 all other Murlocs have +2/+1.
 #4007 03_Southsea_Captain_03_03 Your other Pirates have +1/+1.
 #4008 05_Faceless_Manipulator_03_03 BATTLECRY: Choose a minion and become a copy of it.
 #4009 10_Sea_Giant_08_08 Costs (1) less for each other minion on the battlefield.
@@ -188,7 +187,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #5016 06_Sylvanas_Windrunner_05_05 DEATHRATTLE: Take control of a random enemy minion.
 #5017 06_The_Beast_09_07 DEATHRATTLE: Summon a 3/3 Pip Quickwit for your opponent.
 #5018 06_The_Black_Knight_04_05 BATTLECRY: Destroy an enemy minion with Taunt.
-#5019 07_Baron_Geddon_07_05 At the end of your turn, deal 2 damage to ALL other characters.
+#5019 07_Baron_Geddon_07_05 At the end of your turn, deal 2 damage to all other characters.
 #5020 08_Gruul_07_07 At the end of each turn, gain +1/+1.
 #5021 08_Ragnaros_the_Firelord_08_08 Can't attack. At the end of your turn, deal 8 damage to a random enemy.
 #5022 09_Alexstrasza_08_08 BATTLECRY: Set a hero's remaining Health to 15.
@@ -296,7 +295,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #2404 01_Redemption SECRET: When a friendly minion dies, return it to life with 1 Health.
 #2405 01_Repentance SECRET: After your opponent plays a minion, reduce its Health to 1.
 #2406 02_Argent_Protector_02_02 BATTLECRY: Give a friendly minion Divine Shield.
-#3401 02_Equality Change the Health of ALL minions to 1.
+#3401 02_Equality Change the Health of all minions to 1.
 #3402 03_Aldor_Peacekeeper_03_03 BATTLECRY: Change an enemy minion's Attack to 1.
 #3403 03_Divine_Favor Draw cards until you have as many in hand as your opponent.
 #3404 05_Blessed_Champion Double a minion's Attack.
@@ -314,7 +313,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #1505 03_Shadow_Word:_Death Destroy a minion with 5 or more Attack.
 #1506 05_Holy_Nova Deal 2 damage to all ennemies. Restore 2 Health to all friendly characters.
 #1507 10_Mind_Control Take control of an enemy minion.
-#2501 00_Circle_of_Healing Restore 4 Health to ALL minions.
+#2501 00_Circle_of_Healing Restore 4 Health to all minions.
 #2502 00_Silence Silence a minion.
 #2503 01_Inner_Fire Change a minion's Attack to be equal to its Health.
 #2504 01_Northshire_Cleric_01_03 Whenever a minion is healed, draw a card.
@@ -396,8 +395,8 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #1806 02_Felstalker_04_03 BATTLECRY: Discard a random card.
 #1807 03_Drain_Life Deal 2 damage. Restore 2 Health to your hero.
 #1808 03_Shadow_Bolt Deal 4 damage to a minion.
-#1809 04_Hellfire Deal 3 damage to ALL characters.
-#1810 06_Dread_Infernal_06_06 BATTLECRY: Deal 1 damage to ALL other characters.
+#1809 04_Hellfire Deal 3 damage to all characters.
+#1810 06_Dread_Infernal_06_06 BATTLECRY: Deal 1 damage to all other characters.
 #2801 01_Blood_Imp_00_01 STEALTH. At the end of your turn, give another random friendly minion +1 Health.
 #2802 01_Flame_Imp_03_02 BATTLECRY: Deal 3 damage to your hero.
 #2803 01_Power_Overwhelming Give a friendly minion +4/+4 until end of turn. Then, it dies. Horribly.
@@ -416,7 +415,7 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 
 <warrior cards>
 #1901 01_Execute Destroy a damaged enemy minion.
-#1902 01_Whirlwind Deal 1 damage to ALL minions.
+#1902 01_Whirlwind Deal 1 damage to all minions.
 #1903 02_Cleave Deal 2 damage to two random enemy minions.
 #1904 02_Fiery_War_Axe_3_2
 #1905 02_Heroic_Strike Give your hero +4 Attack this turn.
@@ -440,4 +439,3 @@ Apart from rarity and class belonging, the cards are sorted by cost and name
 #4902 05_Brawl Destroy all minions except one. (chosen randomly)
 #4903 07_Gorehowl_7_1 Attacking a minion costs 1 Attack instead of 1 Durability.
 #5901 08_Grommash_Hellscream_04_09 CHARGE. ENRAGE: +6 Attack
-
